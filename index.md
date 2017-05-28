@@ -73,6 +73,6 @@ sections:
 
 # Who?
 
-Hi! My name is Natalia and I'm a recent Queensland College of Art (Griffith University) graduate living on the Gold Coast, Australia. My passion is design and I'm always seeking a challenge. I also specialise in vector illustration as I love to include my own flare in design when possible!
+Hi! My name is Natalia. I'm a graphic designer and sessional academic at Griffith University. My passion is design and I'm always seeking a challenge. I also specialise in vector illustration as I love to include my own flare in design when possible!
 
-My poison of choice is Adobe Illustrator and InDesign, focusing mainly on corporate branding and product packaging design. I always look for new things to learn, so my list will be ever expanding in the years to come. Please make yourself at home!
+I am proficient Adobe Illustrator, InDesign and Photoshop. I am currently mainly on corporate branding and product packaging design. I always look for new things to learn, so my list will be ever expanding in the years to come. Please make yourself at home and feel free to contact me!
