@@ -1,0 +1,16 @@
+
+title: Steamoven Design
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  My name is Natalia and I'm a recent Queensland College of Art (Griffith University) graduate living on the Gold Coast, Australia. 
+  My passion is design and I'm always seeking a challenge.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

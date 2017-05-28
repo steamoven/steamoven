@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+
+<header>
+  <div id="icons">
+    <a href="{{page.facebook_link}}"><img src="/img/websites/facebook.svg"></a>
+    <a href="{{page.instagram_link}}"><img src="/img/websites/instagram.svg"></a>
+    <a href="{{page.linkedin_link}}"><img src="/img/websites/linkedin.svg"></a>
+  </div>
+  <img src="/img/header/cloud.svg" alt="logo" id="logo">
+</header>
+
+<div id="about" class="section">
+
+<div class="container">
+  {{content}}
+  </div>
+
+</div>
+
+{% for section in page.sections %}
+  <div class="section">
+    <div class="container">
+      <h1>{{section.title}}</h1>
+      <ul>
+      {% for image in section.images %}
+        <li>
+          <a href="#{{image.link}}" class="page-link">
+          <span class="background" style="background-image:url({{image.url}})"></span>
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endfor %}
+
+
+<div class="background-zone"></div>
+
+{% for page in site.pages %}
+  {% if page.layout == "page" %}
+    <div class="page {{page.permalink|slugify}}">
+      {{page.content|markdownify}}
+    </div>
+  {% endif %}
+{% endfor %}
+
+<script>
+
+
+  var lastScroll = 0;
+
+  document.querySelector('.background-zone').addEventListener('click', function(){
+
+    document.querySelector('.background-zone').classList.remove('active');
+
+    var pages = document.querySelectorAll('.page');
+    for(var i = 0; i < pages.length; i++){
+      pages[i].classList.remove('active');
+    }
+
+    location.hash = '';
+
+    document.body.scrollTop = lastScroll;
+
+  });
+
+  document.querySelector('.page-link').addEventListener('click', function(e){
+    var hash = e.currentTarget.getAttribute('href');
+    hashchange(hash);
+  });
+
+
+  function openPage(hash){
+
+      document.querySelector('.background-zone').classList.add('active');
+      document.querySelector('.page.'+hash.substr(1)).classList.add('active');
+      lastScroll = document.body.scrollTop;
+      document.body.scrollTop = 0;
+    
+  }
+
+  function hashchange(){
+    if(location.hash.length>1){
+      openPage(location.hash);
+    }
+  }
+
+  window.addEventListener('hashchange', hashchange);
+  hashchange();
+
+</script>
